@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicted Value Display</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .predicted-value {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .predicted-value span {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        /* For responsiveness on smaller screens */
+        @media (max-width: 600px) {
+            .predicted-value span {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Predicted Value</h1>
+        <div class="predicted-value">
+            <span id="value">{{value}}</span>
+        </div>
+    </div>
+</body>
+</html>

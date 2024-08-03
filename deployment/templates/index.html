@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fare Amount Taxi</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		
+		.form-container {
+			width: 50%;
+			margin: 40px auto;
+			background-color: #fff;
+			padding: 20px;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		.form-container h1 {
+			margin-top: 0;
+			color: #333;
+		}
+		
+		.form-container label {
+			display: block;
+			margin-bottom: 10px;
+			color: #666;
+		}
+		
+		.form-container input[type="number"], .form-container input[type="text"] {
+			width: 100%;
+			height: 40px;
+			margin-bottom: 20px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		
+		.form-container select {
+			width: 100%;
+			height: 40px;
+			margin-bottom: 20px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		
+		.form-container input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		.form-container input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<div class="form-container">
+		<h1>Fare Amount Predictor</h1>
+		<form action="result"> <!--This is the route to perform the action-->
+			<label for="jfk_distance">JFK Distance:</label>
+			<input type="number" step="0.000001" id="jfk_distance" name="jfk_distance" required><br><br>
+			<label for="distance">Distance:</label>
+			<input type="number" step="0.000001" id="distance" name="distance" required><br><br>
+			<label for="day">Day:</label>
+			<input type="text" id="day" name="day" required><br><br>
+			<label for="month">Month:</label>
+			<input type="text" id="month" name="month" required><br><br>
+			<label for="year">Year:</label>
+			<input type="text" id="year" name="year" required><br><br>
+			<label for="car_condition">Car Condition:</label>
+			<select id="car_condition" name="car_condition" required>
+				<option value="Bad">Bad</option>
+				<option value="Good">Good</option>
+				<option value="Very Good">Very Good</option>
+				<option value="Excellent">Excellent</option>
+			</select><br><br>
+			<label for="pickup_longitude">Pick up Longitude </label>
+            <input type="number" step="0.000001" id="pickup_longitude" name="pickup_longitude" required><br><br>
+			<label for="pickup_latitude">Pick up Latitude</label>
+            <input type="number" step="0.000001" id="pickup_latitude" name="pickup_latitude" required><br><br>
+			<label for="dropoff_longitude">Drop off Longitude</label>
+            <input type="number" step="0.000001" id="dropoff_longitude" name="dropoff_longitude" required><br><br>
+			<label for="dropoff_latitude">Drop off Latitude</label>
+            <input type="number" step="0.000001" id="dropoff_latitude" name="dropoff_latitude" required><br><br>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+</html>
